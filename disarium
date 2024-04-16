@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+int a,b=0,temp=0,sum=0,s=1,c;
+scanf("%d",&a);
+temp=a;
+c=a;
+while(a>0){
+a=a/10;
+b=b+1;
+}
+while(temp>0){
+int last=temp%10;
+for(int i=1;i<=b;i++){
+s=s*last;
+}
+sum=sum+s;
+s=1;
+temp=temp/10;
+b=b-1;
+}printf("%d",sum);
+if(sum==c){
+printf("Yes");
+}
+else{
+printf("No");
+}
+} 
